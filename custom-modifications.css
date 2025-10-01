@@ -1,0 +1,154 @@
+/* Custom modifications to hide unwanted elements */
+
+/* Hide navigation menu items - targeting common Wix navigation selectors */
+[data-comp-id*="menu"], 
+[data-comp-id*="navigation"], 
+[data-comp-id*="nav"],
+nav,
+.navigation,
+.menu,
+.header-menu,
+.site-menu {
+    display: none !important;
+}
+
+/* Hide specific navigation items if they contain these texts */
+a[href*="home"], 
+a[href*="menu"], 
+a[href*="franchise"], 
+a[href*="blog"], 
+a[href*="gallery"],
+a:contains("Home"),
+a:contains("Menu"), 
+a:contains("Franchise"),
+a:contains("Blog"),
+a:contains("Gallery") {
+    display: none !important;
+}
+
+/* Hide contact form elements and all contact-related content */
+[data-comp-id*="form"],
+[data-comp-id*="contact"],
+form,
+.contact-form,
+.contact-us-form,
+input[type="submit"],
+button[type="submit"],
+.submit-button,
+.contact-button,
+.contact-us-button {
+    display: none !important;
+}
+
+/* Hide all buttons containing "Contact" text */
+button:contains("Contact"),
+button:contains("contact"),
+a:contains("Contact"),
+a:contains("contact"),
+[data-comp-id*="button"]:contains("Contact"),
+[data-comp-id*="button"]:contains("contact") {
+    display: none !important;
+}
+
+/* Hide contact information sections - more specific targeting */
+[data-comp-id*="contact"],
+[data-comp-id*="form"],
+div:contains("CONTACT"),
+div:contains("Contact"),
+section:contains("CONTACT"),
+section:contains("Contact"),
+*:contains("OPENING HOURS"),
+*:contains("Opening Hours"),
+*:contains("opening hours"),
+*:contains("Dine In or Take Away"),
+*:contains("Monday - Sunday") {
+    display: none !important;
+}
+
+/* Additional selectors for Wix-specific components */
+#comp-kknecrzj, /* DropDownMenu component */
+#comp-kknecroh1, /* LinkBar component */
+#comp-klit2cp5, /* SiteButton component */
+#comp-kiflr6is6, /* StripColumnsContainer that might contain forms */
+#comp-kiflrif5, /* AppWidget component */
+#comp-kiflrifc /* FormContainer component */ {
+    display: none !important;
+}
+
+/* Hide any elements containing specific text */
+*:contains("Home"),
+*:contains("Menu"),
+*:contains("Franchise"), 
+*:contains("Blog"),
+*:contains("Gallery"),
+*:contains("Contact Us"),
+*:contains("Submit") {
+    display: none !important;
+}
+
+/* Hide large empty sections and reduce spacing */
+#comp-kiflr6it1,
+#comp-kiflr6it,
+#comp-kii1j6ds1,
+#comp-kii1j6ds2,
+#comp-kii1j6ds3 {
+    display: none !important;
+}
+
+/* Reduce excessive spacing and padding */
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Make footer much more compact and center the text */
+#SITE_FOOTER {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#comp-kifewcwt {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* Center footer text and reduce spacing */
+#SITE_FOOTER * {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+}
+
+/* Ensure footer text is centered */
+#comp-kifewcwt * {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+/* More specific targeting for the CONTACT section */
+#comp-kiflr6is3,
+#comp-kiflr6is4,
+[data-mesh-id*="contact"],
+[data-mesh-id*="Contact"],
+*[style*="background"][style*="beige"],
+*[style*="background"][style*="tan"] {
+    display: none !important;
+}
+
+/* Target the specific CONTACT text element */
+*:contains("CONTACT"):not(footer):not(#SITE_FOOTER) {
+    display: none !important;
+}
